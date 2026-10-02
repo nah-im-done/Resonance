@@ -1,0 +1,59 @@
+---
+import Header from "../components/Header.astro";
+import "../styles/global.css";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title?: string;
+}
+
+const { title = "Resonance" } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>{title}</title>
+
+    <meta
+      name="description"
+      content="Resonance — RMIT Design Exhibition"
+    />
+  </head>
+
+  <body>
+    <main class="site-shell">
+      <Header />
+
+      <slot />
+
+      <Footer />
+    </main>
+  </body>
+</html>
+
+<style>
+.site-shell {
+  width: 100%;
+  max-width: 420px;
+
+  margin: 0 auto;
+  padding: 0 var(--page-padding-mobile);
+}
+
+@media (min-width: 1024px) {
+  .site-shell {
+    max-width: 1200px;
+    padding: 0 var(--page-padding-desktop);
+  }
+}
+
+  @media (min-width: 1024px) {
+    .site-shell {
+      max-width: 1200px;
+      padding: 0 48px;
+    }
+  }
+</style>

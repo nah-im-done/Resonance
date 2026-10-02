@@ -1,17 +1,271 @@
 ---
-
+import ExhibitionLayout from "../layouts/ExhibitionLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<ExhibitionLayout title="Resonance">
+
+  <section class="hero">
+
+    <div class="logo-image">
+      <img
+        src="/images/landing/Resonance_Logo.webp"
+        alt="Resonance exhibition artwork"
+      />
+    </div>
+
+    <p class="description">
+     Resonance Exhibition is organized by RMIT Hanoi's dedicated final-year students from the Design Studies program with the help of a lecture. Bringing together 20 distinct voices, Resonance is a space for our students, although different in their ideas and practices, to leave an impression on the audience through our echoing design. 
+    </p>
+
+  </section>
+
+
+  <section class="students">
+
+    <div class="section-header">
+
+      <h2>STUDENTS</h2>
+
+      <a href="/about">
+        About us
+      </a>
+
+    </div>
+
+
+    <div class="student-wordmarks">
+
+  <a href="#" class="student-wordmark">
+    <img 
+      src="/images/landing/Steve.png" 
+      alt="Steve" 
+      loading = "lazy"/>
+  </a>
+
+  <a href="#" class="student-wordmark">
+    <img src="/images/landing/Chau.png" alt="Chau" loading="lazy"/>
+  </a>
+
+  <a href="#" class="student-wordmark">
+    <img src="/images/landing/Minh.png" alt="Minh" loading="lazy"/>
+  </a>
+
+  <a href="#" class="student-wordmark">
+    <img src="/images/landing/LyTruong.png" alt="Ly Truong" loading="lazy"/>
+  </a>
+
+  <a href="#" class="student-wordmark">
+    <img src="/images/landing/AnhVu.png" alt="Anh Vu" loading="lazy"/>
+  </a>
+
+  <a href="#" class="student-wordmark">
+    <img src="/images/landing/Etel.png" alt="Etel" loading="lazy"/>
+  </a>
+
+  <a href="#" class="student-wordmark">
+    <img src="/images/landing/AnhLe.png" alt="Anh Le" loading="lazy"/>
+  </a>
+
+    <a href="#" class="student-wordmark">
+    <img src="/images/landing/MaiNgo.png" alt="Mai Ngo" loading="lazy"/>
+  </a>
+
+  <a href="#" class="student-wordmark">
+    <img src="/images/landing/HaNguyen.png" alt="HaNguyen" loading="lazy"/>
+  </a>
+
+  <a href="#" class="student-wordmark">
+    <img src="/images/landing/TraPham.png" alt="TraPham" loading="lazy"/>
+  </a>
+
+  <a href="#" class="student-wordmark">
+    <img src="/images/landing/Giang.png" alt="Giang" loading="lazy"/>
+  </a>
+
+  <a href="#" class="student-wordmark">
+    <img src="/images/landing/Ngoc.png" alt="Ngoc" loading="lazy"/>
+  </a>
+
+  <a href="#" class="student-wordmark">
+    <img src="/images/landing/Lam.png" alt="Lam" loading="lazy"/>
+  </a>
+
+  <a href="#" class="student-wordmark">
+    <img src="/images/landing/Ton.png" alt="Ton" loading="lazy"/>
+  </a>
+
+    <a href="#" class="student-wordmark">
+    <img src="/images/landing/MaiDo.png" alt="Mai Do" loading="lazy"/>
+  </a>
+
+  <a href="#" class="student-wordmark">
+    <img src="/images/landing/NguyenDo.png" alt="Nguyen Do" loading="lazy"/>
+  </a>
+
+  <a href="#" class="student-wordmark">
+    <img src="/images/landing/Tony.png" alt="Tony" loading="lazy"/>
+  </a>
+
+  <a href="#" class="student-wordmark">
+    <img src="/images/landing/NguyenPham.png" alt="Nguyen Pham" loading="lazy"/>
+  </a>
+
+  <a href="#" class="student-wordmark">
+    <img src="/images/landing/Dat.png" alt="Dat" loading="lazy"/>
+  </a>
+
+  <a href="#" class="student-wordmark">
+    <img src="/images/landing/Duc.png" alt="Duc" loading="lazy"/>
+  </a>
+
+</div>
+
+  </section>
+
+</ExhibitionLayout>
+
+
+<style>
+.hero {
+  padding: 0 0 32px;
+}
+
+.logo-image {
+  width: 100%;
+  aspect-ratio: 0.9;
+
+  margin-bottom: 24px;
+
+  overflow: hidden;
+  position: relative;
+}
+
+.logo-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  transform: translateY(-12%);
+}
+
+.description {
+  max-width: 100%;
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+}
+
+@media (min-width: 1024px) {
+  .logo-image {
+    aspect-ratio: 1.06;
+  }
+
+  .logo-image img {
+    transform: translateY(-19%);
+  }
+
+  .description {
+    max-width: 640px;
+  }
+}
+  .students {
+    padding: 0 0 32px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .section-header h2 {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .section-header a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 92px;
+    min-height: 37px;
+
+    padding: 4px 10px;
+
+    border: 1px solid #fff;
+    border-radius: 999px;
+
+    font-size: 12px;
+    text-decoration: none;
+
+    flex-shrink: 0;
+  }
+
+  .student-wordmarks {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  column-gap: 16px;
+  row-gap: 16px;
+
+  align-items: center;
+}
+
+.student-wordmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+  min-height: 72px;
+
+  padding: 4px;
+
+  text-decoration: none;
+}
+
+.student-wordmark img {
+  display: block;
+
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+
+  object-fit: contain;
+}
+
+  .student-wordmark:hover {
+    opacity: 0.8;
+  }
+
+@media (min-width: 768px) {
+  .hero {
+    padding-top: 48px;
+  }
+
+  .description {
+    max-width: 640px;
+  }
+
+  .student-wordmarks {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 24px;
+    row-gap: 32px;
+  }
+
+  .student-wordmark {
+    min-height: 100px;
+  }
+
+  .student-wordmark img {
+    max-width: 220px;
+  }
+}
+</style>

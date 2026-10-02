@@ -1,0 +1,50 @@
+---
+interface Props {
+  name: string;
+  slug: string;
+}
+
+const { name, slug } = Astro.props;
+---
+
+<a class="student-card" href={`/students/${slug}`}>
+  <span>{name}</span>
+</a>
+
+<style>
+  .student-card {
+    display: flex;
+    align-items: flex-end;
+
+    min-height: 120px;
+
+    padding: 12px;
+
+    border: 1px solid white;
+
+    color: white;
+    text-decoration: none;
+  }
+
+  .student-card span {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .student-card:hover {
+    background: white;
+    color: black;
+  }
+
+  @media (min-width: 1024px) {
+    .student-card {
+      min-height: 180px;
+    }
+
+    .student-card span {
+      font-size: 18px;
+    }
+  }
+</style>
