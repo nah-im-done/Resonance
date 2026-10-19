@@ -158,6 +158,16 @@ import ExhibitionLayout from "../layouts/ExhibitionLayout.astro";
 }
 
 @media (min-width: 1024px) {
+  .hero {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+
+    gap: 48px;
+
+    align-items: center;
+  }
+
   .logo-image {
     aspect-ratio: 1.06;
   }

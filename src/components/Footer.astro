@@ -44,6 +44,13 @@
     justify-content: space-between;
     gap: 24px;
 
+    /* Break out of the centered shell so the text reaches
+     * the viewport edges, matching the fixed header. */
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+
+    padding: 0 20px;
+
     font-size: 8px;
     line-height: 1.15;
   }
